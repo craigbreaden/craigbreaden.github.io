@@ -1,0 +1,32 @@
+name: Build and release Engineered by Breaden
+on: push
+jobs:
+  build-project:
+    name: Build application
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code=
+        uses: actions/checkout@v3
+      - name: Setup Node 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: npm
+      - name: Install NPM Dependencies
+        run: npm install
+      - name: Build Static website
+        run: npm run build 
+      - name: Export
+        run: npm run export
+      - name: No Jekyll
+        run: touch ./out/.nojekyll
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with: 
+          name: Static Site
+          path: out/
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          folder: out/
