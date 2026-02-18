@@ -464,9 +464,16 @@ section {
 /* --- Skills Section --- */
 .skills-categories {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 12px;
     margin-bottom: 36px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.skills-categories::-webkit-scrollbar {
+    display: none;
 }
 
 .skill-category {
@@ -482,6 +489,8 @@ section {
     font-size: 0.95rem;
     cursor: pointer;
     transition: all 0.25s;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .skill-category svg {
@@ -877,10 +886,6 @@ section {
 /* --- About CTA --- */
 .about-cta {
     color: var(--text-secondary) !important;
-    border-left: 3px solid var(--accent-electric);
-    padding-left: 16px;
-    margin-top: 8px;
-    font-style: italic;
 }
 
 /* --- Reading Section --- */
