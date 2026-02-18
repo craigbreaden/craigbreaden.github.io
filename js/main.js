@@ -45,10 +45,10 @@
         if (p.x < 0 || p.x > w) p.vx *= -1;
         if (p.y < 0 || p.y > h) p.vy *= -1;
 
-        // Draw particle
+        // Draw particle -- mix of cyan and electric green
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 212, 255, 0.35)';
+        ctx.fillStyle = i % 3 === 0 ? 'rgba(0, 255, 136, 0.3)' : 'rgba(0, 212, 255, 0.35)';
         ctx.fill();
 
         // Draw connections
@@ -117,18 +117,18 @@
       { type: 'output', text: 'Craig Breaden', className: 'name' },
       { type: 'blank' },
       { type: 'command', text: 'cat role.txt' },
-      { type: 'output', text: 'Senior Solutions Architect @ Equinix' },
-      { type: 'output', text: 'Melbourne, Australia' },
+      { type: 'output', text: 'Head of Engineering @ DaisyChain Energy' },
+      { type: 'output', text: 'New York, NY' },
       { type: 'blank' },
       { type: 'command', text: 'cat mission.txt' },
       {
         type: 'output',
-        text: 'Engineering critical infrastructure.',
+        text: 'Building control systems for the grid edge.',
         className: 'highlight',
       },
       {
         type: 'output',
-        text: 'Connecting the digital world.',
+        text: 'From microgrids to megawatts.',
         className: 'highlight',
       },
       {
@@ -329,6 +329,7 @@
         '.skills-categories, .skills-display, ' +
         '.orbit-system, ' +
         '.life-card, ' +
+        '.book-card, .reading-footer, ' +
         '.musings-placeholder'
     );
     targets.forEach((el) => el.classList.add('fade-in'));
