@@ -265,7 +265,8 @@
       activeSkillNode = node;
       tooltip.textContent = text;
       tooltip.classList.add('visible');
-      positionTooltipAtNode(node);
+      // Wait one frame so the browser can lay out the tooltip before measuring
+      requestAnimationFrame(() => positionTooltipAtNode(node));
     });
   });
 
