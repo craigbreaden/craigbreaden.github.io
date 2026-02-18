@@ -1241,12 +1241,16 @@ section {
     }
 
     .skills-categories {
+        flex-wrap: wrap;
+        overflow-x: visible;
         gap: 8px;
     }
 
     .skill-category {
         padding: 10px 14px;
         font-size: 0.85rem;
+        flex-shrink: 1;
+        white-space: normal;
     }
 
     .skill-category svg {
