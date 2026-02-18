@@ -771,6 +771,7 @@ section {
 .node-6 { top: 85%; left: 25%; }
 .node-7 { top: 60%; left: 5%; }
 .node-8 { top: 25%; left: 5%; }
+.node-9 { top: 45%; left: 92%; }
 
 /* Gentle floating animation for each node */
 .interest-node {
@@ -785,6 +786,7 @@ section {
 .node-6 { animation-delay: -3.75s; }
 .node-7 { animation-delay: -4.5s; }
 .node-8 { animation-delay: -5.25s; }
+.node-9 { animation-delay: -6s; }
 
 @keyframes gentleFloat {
     0%, 100% { transform: translate(0, 0); }
