@@ -1120,11 +1120,51 @@ section {
     }
 
     .orbit-system {
-        width: 600px;
-        height: 600px;
-        transform: scale(0.65);
-        transform-origin: center center;
-        margin: -105px auto;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        justify-items: center;
+    }
+
+    .orbit-center,
+    .orbit-ring {
+        display: none;
+    }
+
+    .interest-node {
+        position: static;
+        animation: none;
+    }
+
+    .interest-node:hover {
+        animation: none;
+    }
+
+    .interest-detail {
+        position: static;
+        transform: none;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        border: none;
+        background: none;
+        white-space: normal;
+        text-align: center;
+        pointer-events: auto;
+        transition: opacity 0.3s, max-height 0.3s, padding 0.3s;
+    }
+
+    .interest-node:hover .interest-detail,
+    .interest-node.touched .interest-detail {
+        opacity: 1;
+        max-height: 80px;
+        padding: 6px 0 0 0;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        box-shadow: none;
     }
 
     .life-grid {
@@ -1213,33 +1253,22 @@ section {
     }
 
     .orbit-system {
-        width: 600px;
-        height: 600px;
-        transform: scale(0.5);
-        transform-origin: center center;
-        margin: -150px auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
-    .interest-detail {
-        position: static;
-        transform: none;
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        padding: 0;
-        border: none;
-        background: none;
-        white-space: normal;
-        pointer-events: auto;
-        transition: opacity 0.3s, max-height 0.3s, padding 0.3s;
+    .interest-icon {
+        width: 44px;
+        height: 44px;
     }
 
-    .interest-node.touched .interest-detail {
-        opacity: 1;
-        max-height: 80px;
-        padding: 6px 0 0 0;
+    .interest-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .interest-label {
         font-size: 0.75rem;
-        color: var(--text-muted);
     }
 }
 
