@@ -1120,31 +1120,11 @@ section {
     }
 
     .orbit-system {
-        width: 400px;
-        height: 400px;
-    }
-
-    .ring-1 { width: 180px; height: 180px; }
-    .ring-2 { width: 280px; height: 280px; }
-    .ring-3 { width: 380px; height: 380px; }
-
-    .orbit-center {
-        width: 80px;
-        height: 80px;
-    }
-
-    .interest-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .interest-icon svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    .interest-label {
-        font-size: 0.75rem;
+        width: 600px;
+        height: 600px;
+        transform: scale(0.65);
+        transform-origin: center center;
+        margin: -105px auto;
     }
 
     .life-grid {
@@ -1233,35 +1213,11 @@ section {
     }
 
     .orbit-system {
-        width: 320px;
-        height: 320px;
-    }
-
-    .ring-1 { width: 140px; height: 140px; }
-    .ring-2 { width: 220px; height: 220px; }
-    .ring-3 { width: 300px; height: 300px; }
-
-    .orbit-center {
-        width: 64px;
-        height: 64px;
-    }
-
-    .orbit-center span {
-        font-size: 0.6rem;
-    }
-
-    .interest-icon {
-        width: 34px;
-        height: 34px;
-    }
-
-    .interest-icon svg {
-        width: 16px;
-        height: 16px;
-    }
-
-    .interest-label {
-        font-size: 0.7rem;
+        width: 600px;
+        height: 600px;
+        transform: scale(0.5);
+        transform-origin: center center;
+        margin: -150px auto;
     }
 
     .interest-detail {

@@ -398,15 +398,22 @@
     svg.style.pointerEvents = 'none';
     svg.style.zIndex = '1';
 
+    // Use offsetWidth/Height for layout dimensions (unaffected by CSS transform scale)
+    const layoutW = system.offsetWidth;
+    const layoutH = system.offsetHeight;
     const systemRect = system.getBoundingClientRect();
-    const centerX = systemRect.width / 2;
-    const centerY = systemRect.height / 2;
+    // Ratio between layout size and visual (post-transform) size
+    const scaleX = layoutW / systemRect.width;
+    const scaleY = layoutH / systemRect.height;
+    const centerX = layoutW / 2;
+    const centerY = layoutH / 2;
 
     const nodes = system.querySelectorAll('.interest-node');
     nodes.forEach((node) => {
       const nodeRect = node.getBoundingClientRect();
-      const nodeX = nodeRect.left - systemRect.left + nodeRect.width / 2;
-      const nodeY = nodeRect.top - systemRect.top + nodeRect.height / 2;
+      // Convert visual coordinates back to layout coordinates
+      const nodeX = (nodeRect.left - systemRect.left + nodeRect.width / 2) * scaleX;
+      const nodeY = (nodeRect.top - systemRect.top + nodeRect.height / 2) * scaleY;
 
       const line = document.createElementNS(
         'http://www.w3.org/2000/svg',
