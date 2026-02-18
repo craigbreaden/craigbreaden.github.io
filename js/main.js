@@ -230,25 +230,55 @@
   const tooltip = document.getElementById('skill-tooltip');
   const skillNodes = document.querySelectorAll('.skill-node');
 
+  let activeSkillNode = null;
+
   skillNodes.forEach((node) => {
+    // Desktop: mouse-driven tooltips
     node.addEventListener('mouseenter', (e) => {
       const text = node.dataset.tooltip;
       if (!text || !tooltip) return;
       tooltip.textContent = text;
       tooltip.classList.add('visible');
-      positionTooltip(e);
+      positionTooltipAtCursor(e);
     });
 
     node.addEventListener('mousemove', (e) => {
-      positionTooltip(e);
+      positionTooltipAtCursor(e);
     });
 
     node.addEventListener('mouseleave', () => {
       if (tooltip) tooltip.classList.remove('visible');
     });
+
+    // Mobile: tap to show tooltip anchored below the node
+    node.addEventListener('click', (e) => {
+      if (!tooltip) return;
+      const text = node.dataset.tooltip;
+      if (!text) return;
+
+      if (activeSkillNode === node) {
+        tooltip.classList.remove('visible');
+        activeSkillNode = null;
+        return;
+      }
+
+      activeSkillNode = node;
+      tooltip.textContent = text;
+      tooltip.classList.add('visible');
+      positionTooltipAtNode(node);
+    });
   });
 
-  function positionTooltip(e) {
+  // Dismiss tooltip when tapping elsewhere
+  document.addEventListener('click', (e) => {
+    if (!tooltip || !activeSkillNode) return;
+    if (!e.target.closest('.skill-node')) {
+      tooltip.classList.remove('visible');
+      activeSkillNode = null;
+    }
+  });
+
+  function positionTooltipAtCursor(e) {
     if (!tooltip) return;
     const pad = 16;
     let x = e.clientX + pad;
@@ -260,6 +290,30 @@
     }
     if (y + rect.height > window.innerHeight - pad) {
       y = e.clientY - rect.height - pad;
+    }
+
+    tooltip.style.left = x + 'px';
+    tooltip.style.top = y + 'px';
+  }
+
+  function positionTooltipAtNode(node) {
+    if (!tooltip) return;
+    const pad = 12;
+    const nodeRect = node.getBoundingClientRect();
+
+    // Position below the node, centered horizontally
+    let x = nodeRect.left + nodeRect.width / 2 - tooltip.offsetWidth / 2;
+    let y = nodeRect.bottom + 8;
+
+    // Clamp horizontally within viewport
+    if (x < pad) x = pad;
+    if (x + tooltip.offsetWidth > window.innerWidth - pad) {
+      x = window.innerWidth - tooltip.offsetWidth - pad;
+    }
+
+    // If it goes below viewport, show above the node
+    if (y + tooltip.offsetHeight > window.innerHeight - pad) {
+      y = nodeRect.top - tooltip.offsetHeight - 8;
     }
 
     tooltip.style.left = x + 'px';
