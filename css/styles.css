@@ -28,7 +28,7 @@
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 
     --nav-height: 60px;
-    --section-padding: 100px;
+    --section-padding: 72px;
 }
 
 /* --- Reset & Base --- */
@@ -356,9 +356,9 @@ section {
 }
 
 .section-subtitle {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: var(--text-secondary);
-    margin-bottom: 48px;
+    margin-bottom: 36px;
     max-width: 650px;
 }
 
@@ -378,7 +378,7 @@ section {
 .about-grid {
     display: grid;
     grid-template-columns: 300px 1fr;
-    gap: 48px;
+    gap: 40px;
     align-items: start;
 }
 
@@ -420,7 +420,7 @@ section {
 }
 
 .about-lead {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 20px;
@@ -430,7 +430,7 @@ section {
 .about-text p {
     color: var(--text-secondary);
     margin-bottom: 16px;
-    font-size: 1.05rem;
+    font-size: 1.12rem;
 }
 
 .about-text strong {
@@ -534,14 +534,14 @@ section {
 
 .skill-group-header h3 {
     font-family: var(--font-mono);
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: var(--text-primary);
     margin-bottom: 6px;
 }
 
 .skill-group-header p {
     color: var(--text-muted);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .skill-nodes {
@@ -587,7 +587,7 @@ section {
 .node-name {
     display: block;
     font-family: var(--font-mono);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 6px;
@@ -595,7 +595,7 @@ section {
 
 .node-context {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--accent-cyan);
     opacity: 0.7;
     text-transform: uppercase;
@@ -630,7 +630,7 @@ section {
 .interests-universe {
     display: flex;
     justify-content: center;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 .orbit-system {
@@ -787,6 +787,7 @@ section {
 .interest-node:hover {
     animation-play-state: paused;
     transform: scale(1.15) !important;
+    z-index: 20;
 }
 
 /* --- Life Section --- */
@@ -824,7 +825,7 @@ section {
 
 .life-card h3 {
     font-family: var(--font-mono);
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: var(--text-primary);
     margin-bottom: 12px;
 }
@@ -858,7 +859,7 @@ section {
 
 .life-card p {
     color: var(--text-secondary);
-    font-size: 1.05rem;
+    font-size: 1.12rem;
     line-height: 1.7;
 }
 
@@ -935,14 +936,14 @@ section {
 
 .book-title {
     font-family: var(--font-mono);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-primary);
     line-height: 1.3;
 }
 
 .book-author {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-muted);
 }
 
@@ -1013,7 +1014,7 @@ section {
 .terminal-mini .terminal-body {
     padding: 24px 28px;
     font-family: var(--font-mono);
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 2;
 }
 
@@ -1097,7 +1098,7 @@ section {
 /* --- Responsive --- */
 @media (max-width: 900px) {
     :root {
-        --section-padding: 70px;
+        --section-padding: 56px;
     }
 
     .about-grid {
@@ -1152,7 +1153,7 @@ section {
 
 @media (max-width: 640px) {
     :root {
-        --section-padding: 60px;
+        --section-padding: 48px;
     }
 
     .nav-links {
