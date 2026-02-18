@@ -68,10 +68,10 @@
                 </div>
                 <div class="about-text">
                     <p class="about-lead">Controls engineer by training. Systems thinker by nature. Builder by choice.</p>
-                    <p>I'm Craig -- currently <strong>Head of Engineering &amp; Founding Engineer</strong> at <strong>DaisyChain Energy</strong> in New York, where I'm building a monitoring and control platform for the grid edge from 0 to 1. Before that, I spent three years at <strong>Tesla</strong> as a Staff Systems Integration Engineer, designing microgrid control logic for Megapack products with millisecond-level response times.</p>
-                    <p>I have 15+ years of experience across energy, control systems, and real-time simulation -- from utility-scale DER management to hardware-in-the-loop validation. My career started at <strong>Smarter Grid Solutions</strong> in Glasgow, where over a decade I led integration projects for world-leading utilities across the UK and USA.</p>
-                    <p>Originally from <strong>Scotland</strong>, I hold an MEng in Electrical &amp; Mechanical Engineering from the University of Strathclyde and studied product platform design at <strong>MIT</strong>.</p>
-                    <p class="about-cta">If you're in <strong>NYC</strong> or <strong>Scotland</strong> -- come find me for a coffee, a run, a cycle, or a chat about AI and energy. I'm also always up for a game of chess, though fair warning: I only need to be good enough to keep beating my 8-year-old nephew Leo.</p>
+                    <p>I'm Craig -- a multidisciplinary engineer with 15+ years building control systems for the energy sector. I've designed microgrid controllers with millisecond-level response times, built monitoring platforms from zero to one, and led integration projects for utilities across the UK and USA.</p>
+                    <p>My work lives at the intersection of power systems, software, and real-time simulation -- from grid-forming inverters and hardware-in-the-loop validation to full-stack platforms for the grid edge. I write <strong>Rust</strong>, <strong>Python</strong>, and <strong>MATLAB/Simulink</strong>, and I'm most at home where electrons meet code.</p>
+                    <p>Originally from <strong>Scotland</strong>. MEng from Strathclyde. Product design at <strong>MIT</strong>. Now based in <strong>New York</strong>.</p>
+                    <p class="about-cta">If you're in <strong>NYC</strong> or <strong>Scotland</strong> -- come find me for a coffee, a run, a cycle, or a chat about AI and energy. I'm also always up for a game of chess -- I need the practice if I'm going to keep beating my 8-year-old nephew, Leo.</p>
                     <div class="about-tags">
                         <span class="tag">New York, NY</span>
                         <span class="tag">Glasgow Born</span>
@@ -91,105 +91,63 @@
             <p class="section-subtitle">Technologies and protocols I work with across energy, controls, and real-time systems. Click a category to explore.</p>
 
             <div class="skills-categories">
-                <button class="skill-category active" data-category="microgrid">
+                <button class="skill-category active" data-category="power">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                    <span>Microgrid Control</span>
-                </button>
-                <button class="skill-category" data-category="software">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
-                    <span>Software</span>
+                    <span>Power Systems &amp; Control</span>
                 </button>
                 <button class="skill-category" data-category="protocols">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M19.07 4.93l-2.83 2.83m-8.48 8.48l-2.83 2.83"/></svg>
                     <span>Industrial Protocols</span>
                 </button>
+                <button class="skill-category" data-category="software">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+                    <span>Software</span>
+                </button>
                 <button class="skill-category" data-category="simulation">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 10l3-3 2 2 4-4 3 3"/></svg>
-                    <span>HIL &amp; Simulation</span>
+                    <span>Real-Time Simulation</span>
                 </button>
                 <button class="skill-category" data-category="architecture">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
                     <span>Platform &amp; Infra</span>
                 </button>
-                <button class="skill-category" data-category="protection">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <span>Protection &amp; Relaying</span>
-                </button>
             </div>
 
             <div class="skills-display">
-                <!-- Microgrid Control -->
-                <div class="skill-group active" data-group="microgrid">
+                <!-- Power Systems & Control -->
+                <div class="skill-group active" data-group="power">
                     <div class="skill-group-header">
-                        <h3>Microgrid Control &amp; Optimization</h3>
-                        <p>Designing control systems for islanding, resynchronization, and grid-forming inverter management</p>
+                        <h3>Power Systems &amp; Control</h3>
+                        <p>Designing control and protection systems for microgrids, DER, and the grid edge</p>
                     </div>
                     <div class="skill-nodes">
-                        <div class="skill-node" data-tooltip="Seamless transition between grid-connected and islanded modes with millisecond-level response times.">
-                            <span class="node-name">Islanding &amp; Resync</span>
+                        <div class="skill-node" data-tooltip="End-to-end microgrid control -- islanding, resynchronization, black start, and seamless mode transitions.">
+                            <span class="node-name">Microgrid Control</span>
                             <span class="node-context">Control</span>
                         </div>
                         <div class="skill-node" data-tooltip="Inverter control for voltage and frequency formation in islanded microgrids -- the backbone of modern DER systems.">
                             <span class="node-name">Grid Forming Inverters</span>
                             <span class="node-context">Power Electronics</span>
                         </div>
-                        <div class="skill-node" data-tooltip="Black-start sequencing -- restoring a microgrid from a de-energized state without external grid support.">
-                            <span class="node-name">Black Start</span>
-                            <span class="node-context">Resilience</span>
-                        </div>
-                        <div class="skill-node" data-tooltip="Peak shaving, demand response, and load management strategies for commercial and utility-scale sites.">
-                            <span class="node-name">Peak Shaving &amp; DR</span>
-                            <span class="node-context">Optimization</span>
-                        </div>
-                        <div class="skill-node" data-tooltip="Active and reactive power control, frequency response, and voltage regulation per IEEE 1547 and UL 1741.">
-                            <span class="node-name">P/Q Control</span>
-                            <span class="node-context">Grid Support</span>
-                        </div>
                         <div class="skill-node" data-tooltip="Orchestration of BESS, PV, and flexible loads including EV charging and building management systems.">
                             <span class="node-name">DER Orchestration</span>
                             <span class="node-context">Integration</span>
                         </div>
-                        <div class="skill-node" data-tooltip="Model-driven design in MATLAB/Simulink for control logic development and validation before deployment.">
-                            <span class="node-name">Model-Based Design</span>
-                            <span class="node-context">Methodology</span>
+                        <div class="skill-node" data-tooltip="Protection coordination schemes, relay configuration, and fault analysis for mission-critical reliability.">
+                            <span class="node-name">Protection Coordination</span>
+                            <span class="node-context">Reliability</span>
                         </div>
                         <div class="skill-node" data-tooltip="IEEE 1547, UL 1741, interconnection standards compliance for DER integration.">
                             <span class="node-name">IEEE 1547 / UL 1741</span>
                             <span class="node-context">Standards</span>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Software -->
-                <div class="skill-group" data-group="software">
-                    <div class="skill-group-header">
-                        <h3>Software Development</h3>
-                        <p>Building high-integrity software for safety-critical and research-driven environments</p>
-                    </div>
-                    <div class="skill-nodes">
-                        <div class="skill-node" data-tooltip="Systems programming language for high-performance, memory-safe control applications and platform backends.">
-                            <span class="node-name">Rust</span>
-                            <span class="node-context">Systems</span>
+                        <div class="skill-node" data-tooltip="Model-driven design in MATLAB/Simulink for control logic development and validation before deployment.">
+                            <span class="node-name">Model-Based Design</span>
+                            <span class="node-context">Methodology</span>
                         </div>
-                        <div class="skill-node" data-tooltip="Scripting, automation, data pipelines, and automated regression testing for HIL environments.">
-                            <span class="node-name">Python</span>
-                            <span class="node-context">Automation</span>
-                        </div>
-                        <div class="skill-node" data-tooltip="Concurrent systems programming for control services and distributed system components.">
-                            <span class="node-name">GoLang</span>
-                            <span class="node-context">Backend</span>
-                        </div>
-                        <div class="skill-node" data-tooltip="Control system modeling, simulation, and code generation for real-time targets.">
-                            <span class="node-name">MATLAB / Simulink</span>
-                            <span class="node-context">Modeling</span>
-                        </div>
-                        <div class="skill-node" data-tooltip="Frontend development for monitoring dashboards and grid analytics platforms.">
-                            <span class="node-name">NextJS</span>
-                            <span class="node-context">Frontend</span>
-                        </div>
-                        <div class="skill-node" data-tooltip="PLC and automation controller programming for substation and utility control room environments.">
-                            <span class="node-name">IEC 61131 / PLCs</span>
-                            <span class="node-context">Industrial</span>
+                        <div class="skill-node" data-tooltip="Anti-islanding verification, fault emulation, and safety testing on 480V systems.">
+                            <span class="node-name">Anti-Islanding</span>
+                            <span class="node-context">Safety</span>
                         </div>
                     </div>
                 </div>
@@ -232,7 +190,37 @@
                     </div>
                 </div>
 
-                <!-- HIL & Simulation -->
+                <!-- Software -->
+                <div class="skill-group" data-group="software">
+                    <div class="skill-group-header">
+                        <h3>Software Development</h3>
+                        <p>Building high-integrity software for safety-critical and research-driven environments</p>
+                    </div>
+                    <div class="skill-nodes">
+                        <div class="skill-node" data-tooltip="Systems programming language for high-performance, memory-safe control applications and platform backends.">
+                            <span class="node-name">Rust</span>
+                            <span class="node-context">Systems</span>
+                        </div>
+                        <div class="skill-node" data-tooltip="Scripting, automation, data pipelines, and automated regression testing for HIL environments.">
+                            <span class="node-name">Python</span>
+                            <span class="node-context">Automation</span>
+                        </div>
+                        <div class="skill-node" data-tooltip="Concurrent systems programming for control services and distributed system components.">
+                            <span class="node-name">GoLang</span>
+                            <span class="node-context">Backend</span>
+                        </div>
+                        <div class="skill-node" data-tooltip="Control system modeling, simulation, and code generation for real-time targets.">
+                            <span class="node-name">MATLAB / Simulink</span>
+                            <span class="node-context">Modeling</span>
+                        </div>
+                        <div class="skill-node" data-tooltip="PLC and automation controller programming for substation and utility control room environments.">
+                            <span class="node-name">IEC 61131 (PLCs)</span>
+                            <span class="node-context">Industrial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real-Time Simulation -->
                 <div class="skill-group" data-group="simulation">
                     <div class="skill-group-header">
                         <h3>Real-Time Simulation &amp; Validation</h3>
@@ -296,40 +284,6 @@
                         <div class="skill-node" data-tooltip="Google's serverless data warehouse for large-scale grid analytics and historical analysis.">
                             <span class="node-name">BigQuery</span>
                             <span class="node-context">Analytics</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Protection & Relaying -->
-                <div class="skill-group" data-group="protection">
-                    <div class="skill-group-header">
-                        <h3>Protection &amp; Relaying</h3>
-                        <p>Configuring and testing protection schemes for mission-critical reliability</p>
-                    </div>
-                    <div class="skill-nodes">
-                        <div class="skill-node" data-tooltip="SEL Real-Time Automation Controller -- programmable logic, data concentration, and protocol gateway for substation automation.">
-                            <span class="node-name">SEL RTAC</span>
-                            <span class="node-context">Automation</span>
-                        </div>
-                        <div class="skill-node" data-tooltip="Generator protection relay -- configured and tested for seamless microgrid islanding and resynchronization.">
-                            <span class="node-name">SEL 700G</span>
-                            <span class="node-context">Generator Relay</span>
-                        </div>
-                        <div class="skill-node" data-tooltip="Feeder protection relay -- overcurrent, reclosing, and distribution automation applications.">
-                            <span class="node-name">SEL 751</span>
-                            <span class="node-context">Feeder Relay</span>
-                        </div>
-                        <div class="skill-node" data-tooltip="Power quality and revenue metering -- high-fidelity data capture for transient events and billing.">
-                            <span class="node-name">SEL 735</span>
-                            <span class="node-context">Power Quality</span>
-                        </div>
-                        <div class="skill-node" data-tooltip="Protection coordination schemes for backup power solutions meeting mission-critical reliability requirements.">
-                            <span class="node-name">Coordination Studies</span>
-                            <span class="node-context">Engineering</span>
-                        </div>
-                        <div class="skill-node" data-tooltip="Anti-islanding verification, fault emulation, and safety testing on 480V systems.">
-                            <span class="node-name">Anti-Islanding</span>
-                            <span class="node-context">Safety</span>
                         </div>
                     </div>
                 </div>
@@ -483,7 +437,7 @@
                         </div>
                         <span class="metric-label">Enthusiasm: Off the charts</span>
                     </div>
-                    <p>Chief treat officer and professional belly rubber. My co-pilot for WFH days and the reason I never sleep in on weekends.</p>
+                    <p>I am more than happy to share pictures of my dog, even when you aren't asking for them.</p>
                 </div>
             </div>
         </div>
@@ -533,7 +487,7 @@
             <div class="reading-footer">
                 <a href="https://www.goodreads.com/user/show/20543292-craig-breaden" target="_blank" rel="noopener" class="goodreads-link">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-                    <span>See all 76 books on Goodreads</span>
+                    <span>See more on Goodreads</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="arrow-icon"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
                 </a>
             </div>
@@ -544,7 +498,7 @@
     <section id="musings">
         <div class="section-container">
             <h2 class="section-heading"><span class="heading-accent">#</span> musings</h2>
-            <p class="section-subtitle">Thoughts on energy systems, controls, and everything in between.</p>
+            <p class="section-subtitle">Not an expert in most of these -- just learning out loud. Corrections and conversations welcome.</p>
 
             <div class="musings-placeholder">
                 <div class="terminal-mini">
@@ -563,9 +517,10 @@
                         <p><span class="prompt">$</span> echo "Coming soon..."</p>
                         <p>Coming soon...</p>
                         <p><span class="prompt">$</span> cat topics.txt</p>
-                        <p class="muted"># Topics I'll write about:</p>
+                        <p class="muted"># Things I'm learning about:</p>
                         <p class="muted">- Microgrid control and the grid edge</p>
-                        <p class="muted">- Rust for safety-critical systems</p>
+                        <p class="muted">- Energy markets &amp; policy</p>
+                        <p class="muted">- AI, optimization &amp; control</p>
                         <p class="muted">- Hardware-in-the-loop war stories</p>
                         <p class="muted">- Curiosity-driven explorations</p>
                         <p><span class="prompt">$</span> <span class="cursor-blink">_</span></p>
