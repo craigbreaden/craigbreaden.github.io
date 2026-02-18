@@ -1126,7 +1126,25 @@ section {
     }
 
     .interest-detail {
-        display: none;
+        position: static;
+        transform: none;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        border: none;
+        background: none;
+        white-space: normal;
+        pointer-events: auto;
+        transition: opacity 0.3s, max-height 0.3s, padding 0.3s;
+    }
+
+    .interest-node.touched .interest-detail {
+        opacity: 1;
+        max-height: 80px;
+        padding: 6px 0 0 0;
+        font-size: 0.65rem;
+        color: var(--text-muted);
     }
 }
 

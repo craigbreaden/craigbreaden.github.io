@@ -2,7 +2,7 @@ name: Deploy Engineered by Breaden
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
 
 permissions:
   contents: write

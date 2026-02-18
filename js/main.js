@@ -429,4 +429,47 @@
   window.addEventListener('resize', () => {
     setTimeout(drawInterestConnections, 100);
   });
+
+  // ---- Mobile Touch Support for Interest Nodes ----
+  const interestNodes = document.querySelectorAll('.interest-node');
+  interestNodes.forEach((node) => {
+    node.addEventListener('click', (e) => {
+      // Only apply touch toggle on small screens
+      if (window.innerWidth > 640) return;
+      e.preventDefault();
+      const wasActive = node.classList.contains('touched');
+      interestNodes.forEach((n) => n.classList.remove('touched'));
+      if (!wasActive) node.classList.add('touched');
+    });
+  });
+
+  // ---- ARIA: Add roles to interactive elements ----
+  skillNodes.forEach((node) => {
+    node.setAttribute('role', 'button');
+    node.setAttribute('tabindex', '0');
+    node.setAttribute('aria-label', node.querySelector('.node-name').textContent);
+  });
+
+  categoryButtons.forEach((btn) => {
+    btn.setAttribute('role', 'tab');
+    const isActive = btn.classList.contains('active');
+    btn.setAttribute('aria-selected', String(isActive));
+  });
+
+  // Update aria-selected when category changes
+  const originalCategoryHandler = () => {
+    categoryButtons.forEach((btn) => {
+      btn.setAttribute('aria-selected', String(btn.classList.contains('active')));
+    });
+  };
+  categoryButtons.forEach((btn) => {
+    btn.addEventListener('click', originalCategoryHandler);
+  });
+
+  interestNodes.forEach((node) => {
+    node.setAttribute('role', 'button');
+    node.setAttribute('tabindex', '0');
+    const label = node.querySelector('.interest-label');
+    if (label) node.setAttribute('aria-label', label.textContent);
+  });
 })();
