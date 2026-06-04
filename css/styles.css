@@ -674,20 +674,18 @@ section {
 
 .project-icon {
     flex-shrink: 0;
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     border-radius: 14px;
-    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card-hover));
-    border: 1px solid var(--border);
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.project-icon svg {
-    width: 30px;
-    height: 30px;
-    color: var(--accent-cyan);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    color: var(--bg-primary);
 }
 
 .project-info {
@@ -763,21 +761,11 @@ section {
     height: 17px;
 }
 
-.appstore-link .arrow-icon {
-    width: 15px;
-    height: 15px;
-    transition: transform 0.25s;
-}
-
 .appstore-link:hover {
     border-color: var(--accent-cyan);
     background: rgba(0, 212, 255, 0.08);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 212, 255, 0.15);
-}
-
-.appstore-link:hover .arrow-icon {
-    transform: translate(2px, -2px);
 }
 
 /* --- Interests Section --- */
