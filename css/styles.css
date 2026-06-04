@@ -1039,6 +1039,18 @@ section {
     color: var(--text-muted);
 }
 
+.terminal-mini .terminal-link {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    word-break: break-all;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+.terminal-mini .terminal-link:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
 .cursor-blink {
     color: var(--accent-green);
     animation: blink 1s step-end infinite;
