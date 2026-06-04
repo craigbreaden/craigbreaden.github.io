@@ -117,7 +117,7 @@
       { type: 'output', text: 'Craig Breaden', className: 'name' },
       { type: 'blank' },
       { type: 'command', text: 'cat role.txt' },
-      { type: 'output', text: 'Head of Engineering @ DaisyChain Energy' },
+      { type: 'output', text: 'Microgrid Controls @ Intersect' },
       { type: 'output', text: 'New York, NY' },
       { type: 'blank' },
       { type: 'command', text: 'cat mission.txt' },
