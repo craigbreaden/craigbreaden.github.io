@@ -382,10 +382,10 @@
     const targets = document.querySelectorAll(
       '.about-grid, .about-image-wrapper, .about-text, ' +
         '.skills-categories, .skills-display, ' +
+        '.project-card, ' +
         '.orbit-system, ' +
         '.life-card, ' +
-        '.book-card, .reading-footer, ' +
-        '.musings-placeholder'
+        '.book-card, .reading-footer'
     );
     targets.forEach((el) => el.classList.add('fade-in'));
   }
