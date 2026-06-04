@@ -1151,44 +1151,6 @@ section {
     transform: translate(2px, -2px);
 }
 
-/* --- Musings Section --- */
-.musings-placeholder {
-    max-width: 600px;
-}
-
-.terminal-mini {
-    background: rgba(17, 24, 39, 0.9);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.terminal-mini .terminal-body {
-    padding: 24px 28px;
-    font-family: var(--font-mono);
-    font-size: 1.05rem;
-    line-height: 2;
-}
-
-.terminal-mini .terminal-body p {
-    margin-bottom: 0;
-}
-
-.terminal-mini .prompt {
-    color: var(--accent-green);
-    margin-right: 8px;
-    user-select: none;
-}
-
-.terminal-mini .muted {
-    color: var(--text-muted);
-}
-
-.cursor-blink {
-    color: var(--accent-green);
-    animation: blink 1s step-end infinite;
-}
-
 /* --- Footer --- */
 #footer {
     position: relative;
