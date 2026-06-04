@@ -33,7 +33,7 @@ $ tree
 - **Skills explorer** -- Six categories of things I actually work with in critical infrastructure environments. Click around, hover for context.
 - **Curiosity constellation** -- Hobby interests orbiting a center of gravity called "curiosity." Quantum computing and philosophy live here. They get along surprisingly well.
 - **Life.log** -- Running, cycling, reading, and dog metrics. All enthusiasm bars are suspiciously high.
-- **Musings placeholder** -- `ls ./posts/` returns empty. For now.
+- **Projects** -- Things I've built and shipped, like ParentWise AI on the App Store.
 
 ## Tech Stack
 
@@ -62,7 +62,6 @@ Push to `master`. GitHub Actions copies everything to `gh-pages`. That's it. The
 
 ## What's Next
 
-- [ ] Actually write blog posts for the musings section
 - [ ] Strava / Goodreads integrations
 - [ ] Dark mode toggle (it's already dark... darker mode?)
 - [ ] More interactive visualizations for the interests section
