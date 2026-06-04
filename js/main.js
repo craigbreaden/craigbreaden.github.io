@@ -382,6 +382,7 @@
     const targets = document.querySelectorAll(
       '.about-grid, .about-image-wrapper, .about-text, ' +
         '.skills-categories, .skills-display, ' +
+        '.project-card, ' +
         '.orbit-system, ' +
         '.life-card, ' +
         '.book-card, .reading-footer, ' +
